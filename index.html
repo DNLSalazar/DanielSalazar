@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="header">
-        <div class="menuIcon" onclick="fullmenu(this)">
+        <div class="menuIcon" id="menuIcon" onclick="fullmenu(this)">
             <div id="b1"></div>
             <div id="b2"></div>
             <div id="b3"></div>
@@ -34,7 +34,7 @@
         <div class="hello">
             <img src="images/programming.png" alt="LOGUITO" class="helloIcon">
             <div class="name"><h1>I am Daniel Salazar</h1></div>
-            <div class="myJob"><h1>WEB DESIGNER</h1></div>
+            <div class="myJob"><h1><span id="word"></span></h1></div>
             <a href="#" class="letsWork">Let's get to Work</a>
         </div>
     </div>
@@ -184,5 +184,6 @@
     </footer>
 
     <script src="scripts/js.js"></script>
+    <script src="scripts/writeAnimation.js"></script>
 </body>
 </html>

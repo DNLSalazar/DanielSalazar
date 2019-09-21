@@ -14,7 +14,7 @@ body {
     /* justify-content: flex-start; */
     height: auto;
     width: 100%;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     /* background-color: black; */
 }
 
@@ -118,6 +118,41 @@ body {
     width: 240px;
 }
 
+#word {
+    display: inline-block;
+    min-width: 5px;
+    min-height: 19px;
+    width: auto;
+    padding: 4px 5px;
+    position: relative;
+    /* font-family: 'Lobster', cursive; */
+    color: inherit;
+}
+  
+#word::before {
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 80%;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 1px;
+    background-color: rgb(207, 23, 23);
+    animation-name: cursorAnimtion;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+  
+@keyframes cursorAnimtion {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+}
+
 /*----------------------------------------------------ME--------------------------------------------------------------------------------------*/
 
 .me {
@@ -126,7 +161,7 @@ body {
     align-items: center;
     height: 1000px;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/wallppr.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/wallppr.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -138,6 +173,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 300px;
     width: auto;
     height: 50%;
     background-color: rgba(255, 255, 255, 0);
@@ -160,6 +196,7 @@ body {
     font-family: "Hacked";
     color: white;
     font-size: 150%;
+    height: 128px;
 }
 
 .letsWork {
@@ -185,7 +222,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 750px;
+    height: auto;
     width: 100%;
     background-color: rgb(211, 211, 211);
     transform: skewY(-7deg);
@@ -203,8 +240,11 @@ body {
 
 .deg {
     transform: skewY(7deg);
-    margin-bottom: 100px;
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    margin-bottom: 150px;
+    flex-wrap: nowrap;
     width: auto;
     min-width: 0;
     max-width: 1200px;
@@ -477,6 +517,7 @@ body {
     min-width: 450px;
     flex-direction: row;
     height: auto;
+    margin-bottom: 150px;
 }
 
 .mySkills .information {
