@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Charm" rel="stylesheet"> 
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="ElementsScrollAnimation/ElementsScrollAnimation.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
 <body>
@@ -47,60 +48,79 @@
             <div class="information">
                 <div class="myJob about-text"><h1>About Me</h1></div>
                 <div class="name about-text"><h1>I am an engineering student</h1></div>
-                <p class="content about-text">Hi there! I'm from Venezuela, I love code and development, I like to make ideas come to life, my objective is to make coding easier for you, creating amazing designs and beautiful UI.</p>
-                <p class="content about-text">I'm a great fan of videogames, music and NBA. My pasion are new technologies like AI, VR and machine learning</p>
+                <p class="content about-text">
+                    Hi there! I'm from Venezuela, I love code and development,
+                    I like to make ideas come to life, my objective is to make coding easier for you,
+                    creating amazing designs and beautiful UI.
+                </p>
+                <p class="content about-text">
+                    I'm a great fan of videogames, music and NBA.
+                    My pasion are new technologies like AI, VR and machine learning
+                </p>
             </div>
         </div>
     </div>
     
     <div class="services" id="Serv">
-        <div class="myJob services-tittle"><h1>DESIGNS</h1></div>
+        <div class="myJob services-tittle myAnimatable" my-animation="bounce left">
+            <h1>DESIGNS</h1>
+        </div>
         <div class="servicesContainer">
-            <div class="service">
+            <div class="service myAnimatable"  my-animation="fade top">
                 <div class="lineIcon serviceIcon">
                     <img src="images/creativity.png" alt="Idea" class="iconImage">
                 </div>
 
                 <h2>Creative</h2>
 
-                <p class="content about-text">I like to play with design to create something unique</p>
+                <p class="content about-text">
+                    I like to play with design to create something unique
+                </p>
             </div>
 
-            <div class="service">
+            <div class="service myAnimatable"  my-animation="fade bottom">
                 <div class="lineIcon serviceIcon">
                     <img src="images/intuitive.png" alt="Idea" class="iconImage">
                 </div>
 
                 <h2>Intuitive</h2>
 
-                <p class="content about-text">I like to give the best UX/UI</p>
+                <p class="content about-text">
+                    I like to give the best UX/UI
+                </p>
             </div>
             
-            <div class="service">
+            <div class="service myAnimatable"  my-animation="fade bottom">
                 <div class="lineIcon serviceIcon">
                     <img src="images/responsive.png" alt="Idea" class="iconImage">
                 </div>
 
                 <h2>Responsive</h2>
 
-                <p class="content about-text">I design layouts for big and small devices</p>
+                <p class="content about-text">
+                    I design layouts for big and small devices
+                </p>
             </div>
 
-            <div class="service">
+            <div class="service myAnimatable"  my-animation="fade top">
                 <div class="lineIcon serviceIcon">
                     <span class="animated"></span>
                 </div>
 
                 <h2>Dynamic</h2>
 
-                <p class="content about-text">Web sites do not have to be static, I like to bring them to live</p>
+                <p class="content about-text">
+                    Web sites do not have to be static, I like to bring them to live
+                </p>
             </div>
         </div>
     </div>
 
 
     <div class="mySkills" id="Skills">
-        <div class="myJob whatIcanDo"><h1>My Skills</h1></div>
+        <div class="myJob whatIcanDo" >
+            <h1 class="myAnimatable" my-animation="bounce right">My Skills</h1>
+        </div>
         <div class="hello mainskills">
             <div class="information">
                 <h2>Here I go...</h2>
@@ -181,9 +201,13 @@
             <i class="fab fa-telegram-plane"></i>
         </div>
         <div>Iconnice, Smashicons</div>
+       <div>Image by <a href="https://pixabay.com/users/Pixies-1021586/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=785742">Daniel Agrelo</a> 
+            from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=785742">Pixabay</a>
+       </div>
     </footer>
 
     <script src="scripts/js.js"></script>
     <script src="scripts/writeAnimation.js"></script>
+    <script src="ElementsScrollAnimation/ElementsScrollAnimation.js"></script>
 </body>
 </html>

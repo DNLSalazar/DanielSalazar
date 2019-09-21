@@ -161,7 +161,7 @@ body {
     align-items: center;
     height: 1000px;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/wallppr.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/wallppr4.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -264,7 +264,7 @@ body {
 
 .profilePic {
     height: auto;
-    width: 100%;
+    width: 80%;
     max-width: 375px;
     border-radius: 50%;
     align-self: center;
@@ -273,6 +273,7 @@ body {
 .information {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     margin-left: 1%;
     height: 100%;
@@ -290,6 +291,7 @@ body {
 .content {
     /* color: white; */
     width: 100%;
+    max-width: 50ch;
 }
 
 /*---------------------------------------------------------Services---------------------------------------------------------*/
@@ -560,6 +562,7 @@ body {
     justify-content: center;
     align-items: center;
     transform: rotate(-45deg);
+    margin: 15px;
 }
 
 .quality h2 {
