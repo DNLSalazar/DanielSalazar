@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 @font-face {
@@ -15,6 +16,7 @@ body {
     height: auto;
     width: 100%;
     overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
     /* background-color: black; */
 }
 
@@ -161,7 +163,7 @@ body {
     align-items: center;
     height: 1000px;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/wallppr4.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/wallppr.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -258,7 +260,7 @@ body {
     height: 100%;
     width: 49%;
     min-width: 250px;
-    margin-right: 1%;
+    margin-right: 5%;
     /* background-color: lawngreen; */
 }
 
@@ -544,7 +546,7 @@ body {
 .information h2 {
     font-family: 'Charm', cursive;
     font-size: 150%;
-    align-self: flex-start;
+    /* align-self: flex-start; */
 }
 
 .information .about-text {
@@ -596,24 +598,44 @@ body {
     border-left: 5px solid rgba(255, 255, 0, 0);
 }
 
+.quality > span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: .3s ease-in-out;
+}
+
+.quality:hover > span {
+    transform: scale(1) rotate(45deg);
+}
+
 .html::before {
-    transform: rotate(36deg);
+    transform: rotate(126deg);
 }
 
 .css::before {
-    transform: rotate(90deg);
+    transform: rotate(144deg);
 }
 
 .js::before {
-    transform: rotate(108deg);
+    transform: rotate(126deg);
 }
 
 .bs::before {
     transform: rotate(36deg);
 }
 
-.sql::before {
-    transform: rotate(40deg);
+.angular::before {
+    transform: rotate(0deg);
 }
 
 .ps::before {
@@ -624,22 +646,22 @@ body {
     transform: rotate(0deg);;
 }
 
-.node::after {
+.react::after, .angular::after {
     border-bottom: 5px solid rgba(255, 255, 0, 0);
 }
 
-.node::before {
+.react::before, .angular::before {
     border-bottom: 5px solid rgba(255, 255, 0, 0);
     transform: rotate(72deg);
 }
 
-/*---------------------------------------ContactMe------------------------------------------------*/
+/*---------------------------------------My Projects------------------------------------------------*/
 
-.contactUs {
+.MyProjects {
     width: 100%;
     height: 750px;
     background-color: rgb(255, 255, 255);
-    transform: skewY(7deg) ;
+    transform: skewY(7deg);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -647,7 +669,7 @@ body {
     align-items: center;
 }
 
-.contactUs::after {
+.MyProjects::after {
     content: "";
     width: 100%;
     height: 150px;
@@ -656,7 +678,7 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
-.contactUs .nameinc {
+.MyProjects .nameinc {
     margin-top: 25px;
     height: 20%;
     transform: skewY(-7deg);
@@ -664,173 +686,30 @@ body {
     font-size: 150%;
 }
 
-.contactForm {
-    height: 55%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.projectsContainer {
     transform: skewY(-7deg);
-    /* background-color: chartreuse; */
-    margin: 0px 20px;
-    max-width: 1200px;
-    width: 90%;
-}  
-
-.form {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    max-width: 1200px;
-    min-width: 420px;
-    width: 100%;
-    height: auto;
-    /* background-color: rgb(20, 77, 199); */
 }
 
-.inputContainer {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 30px;
+.project {
+    /* background-color: gray; */
+    width: 320px;
+    height: 180px;
+    margin: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-.textarea {
-    margin-top: 55px;
-    margin-bottom: 10px;
-    width: 100%;
-    height: 200px;
-    position: relative;
+.p1 {
+    background-image: url(../images/project1.png);
 }
 
-.textarea textarea {
-    position: absolute;
-    top: 0;
-    left: 0;
-    resize: none;
-    width: 100%;
-    height: 200px;
-    /* background-color: rgb(170, 36, 36); */
-    border: none;
+.p1 {
+    background-image: url(../images/project2.jpg);
 }
 
-.divinput {
-    height: 30px;
-    width: 45%;
-    position: relative;
-    /* background-color: rgba(131, 25, 230, 0.966); */
-}
-
-.divinput label::after {
-    content: "";
-    position: absolute;
-    border: double rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
-    width: 8px;
-    height: 8px;
-    transform: rotateZ(45deg);
-    bottom: -18px;
-    transition: .5s ease;
-}
-
-.divinput label::before {
-    content: "";
-    position: absolute;
-    bottom: -13px;
-    width: 100%;
-    height: 1px;
-    border: 2px solid rgb(255, 0, 0);
-    background-color: rgb(255, 0, 0);
-}
-
-.textarea label::after {
-    content: "";
-    position: absolute;
-    border: double rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
-    width: 8px;
-    height: 8px;
-    transform: rotateZ(45deg);
-    top: 196px;
-    transition: .5s ease;
-}
-
-.textarea label::before {
-    content: "";
-    position: absolute;
-    top: 200px;
-    width: 100%;
-    height: 1px;
-    border: 2px solid rgb(255, 0, 0);
-    background-color: rgb(255, 0, 0);
-}
-
-.divinput input ~ label span {
-    display: block;
-    position: absolute;
-    transition: .5s ease;
-    width: 100%;
-    height: 100%;
-}
-
-.divinput input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: scale(1,0);
-    transition: .5s ease;
-    background: none;
-    border: none;
-}
-
-.form label {
-    color: rgb(0, 0, 0);
-    position: absolute;
-    left: 0;
-    transition: .5s ease;
-    width: 100%;
-    height: 100%;
-    font-family: 'Charm', cursive;
-    font-size: 150%;
-    cursor: text;
-}
-
-.textarea span {
-display: block;
-position: absolute;
-transition: .5s ease;
-}
-
-.textarea label {
-    height: 22px;
-    width: 100%;
-}
-
-/*-------Animations-------*/
-
-.divinput input:focus ~ label::after {
-    background-color: black;
-    border-color: rgb(255, 0, 0);
-}
-
-.textarea textarea:focus ~ label::after {
-    background-color: black;
-    border-color: rgb(255, 0, 0);
-}
-
-.subform {
-    background-color: black;
-    color: rgb(255, 255, 255);
-    align-self: center;
-}
-
-.subform:hover {
-    background-color: rgb(255, 0, 0);
-    color: rgb(0, 0, 0);
-}
 
 
 /*-------------------------------------FOOTER--------------------------------------------*/

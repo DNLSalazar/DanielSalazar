@@ -104,7 +104,7 @@ function animate (data) {
 function animateScroll (e) {
     for(var i = 0; i < animable.length; i++) {
         if(animable[i].getBoundingClientRect().top < 600) {
-            animable[i].addEventListener("click", animate);
+            // animable[i].addEventListener("click", animate);
             animable[i].addEventListener("animationend", stopAnimation);
             animate(animable[i]);
         }
