@@ -76,7 +76,9 @@ body {
 .menu {
     position: absolute;
     height: 100vh;
-    width: 0px;
+    width: 240px;
+    transform-origin: right center;
+    transform: scale(0, 1);
     background-color: black;
     top: 0;
     right: 0;
@@ -117,7 +119,7 @@ body {
 }
 
 .change .menu {
-    width: 240px;
+    transform: scale(1, 1);
 }
 
 #word {
@@ -163,7 +165,7 @@ body {
     align-items: center;
     height: 1000px;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/wallppr.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/wallppr.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -659,7 +661,7 @@ body {
 
 .MyProjects {
     width: 100%;
-    height: 750px;
+    height: auto;
     background-color: rgb(255, 255, 255);
     transform: skewY(7deg);
     display: flex;
@@ -689,25 +691,62 @@ body {
 .projectsContainer {
     transform: skewY(-7deg);
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+    min-width: 350px;
+    max-width: 800px;
+    width: auto;
+    margin-bottom: 100px;
 }
 
 .project {
-    /* background-color: gray; */
+    color: white;
     width: 320px;
     height: 180px;
-    margin: 50px;
+    margin: 25px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: .5s;
+    box-shadow: 0 0 0 250px inset rgba(0, 0, 0, 0.322);
+}
+
+.project a {
+    color: inherit;
+}
+
+.project > .projectTitle {
+    text-align: center;
+}
+
+.project > .projectDescription {
+    opacity: 0;
+    transition: .5s ease-in-out;
+    padding: 0 15px;
+}
+
+.project:hover > .projectDescription {
+    opacity: 1;
+}
+
+.project:hover {
+    box-shadow: 0 0 0 250px inset rgba(0, 0, 0, 0.5);
 }
 
 .p1 {
-    background-image: url(../images/project1.png);
+    background-image: url(../images/project1.webp);
 }
 
-.p1 {
-    background-image: url(../images/project2.jpg);
+.p2 {
+    background-image: url(../images/project2.webp);
+}
+
+.p3 {
+    background-image: url(../images/project3.webp);
+}
+
+.p4 {
+    background-image: url(../images/project4.webp);
 }
 
 

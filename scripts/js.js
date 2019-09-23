@@ -1,12 +1,14 @@
 
-window.addEventListener("load", function() {
+var menIcon = document.getElementById("menuIcon");
 
+window.addEventListener("load", function() {
+  menIcon.addEventListener("click", fullmenu);
 })
 
 
 
-function fullmenu(data) {
-  data.parentElement.classList.toggle("change");
+function fullmenu() {
+  this.parentElement.classList.toggle("change");
 }
 
 function focusIn(data) {
