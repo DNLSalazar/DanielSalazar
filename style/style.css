@@ -296,7 +296,8 @@ body {
 
 .content {
     /* color: white; */
-    width: 100%;
+    width: 95%;
+    padding: 0 7px;
     max-width: 50ch;
 }
 
@@ -949,10 +950,14 @@ footer {
         bottom: -9px;
     }
 
-    /*------------------------------Contact---------------------------------------------*/
+    /*------------------------------Projects---------------------------------------------*/
 
     .project {
         margin: 20px 0;
+    }
+
+    .projectsContainer {
+        min-width: unset;
     }
 
     .nameinc {
