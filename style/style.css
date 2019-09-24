@@ -500,6 +500,7 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 5;
+    overflow: hidden;
 }
 
 .mySkills::before {
@@ -931,7 +932,7 @@ footer {
         padding: 0px 10px;
     }
 
-    .mySkills .hello div {
+    .mySkills .hello > div {
         width: 100%;
         height: auto;
     }
@@ -950,25 +951,30 @@ footer {
 
     /*------------------------------Contact---------------------------------------------*/
 
-    .contactForm {
-        min-width: 0;
-    }
-
-    .form {
-        min-width: 0;
-    }
-
-    .inputContainer {
-        flex-direction: column;
-        flex-wrap: nowrap;
-        height: 100px;
-    }
-
-    .divinput {
-        width: 100%;
+    .project {
+        margin: 20px 0;
     }
 
     .nameinc {
         text-align: center;
+    }
+
+    /*------------------------------Footer---------------------------------------------*/
+
+    footer {
+        flex-wrap: wrap;
+    }
+
+    footer > .myJob {
+        margin-top: 100px;
+    }
+
+    .contactIcons {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .contactIcons > a {
+        margin: 10px;
     }
 }
