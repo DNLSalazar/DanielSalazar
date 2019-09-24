@@ -23,7 +23,9 @@ body {
 .header {
     display: flex;
     position: fixed;
-    width: 100%;
+    min-width: 80px;
+    right: 0;
+    width: 5%;
     height: 75px;
     background-color: rgba(0, 0, 0, 0);
     justify-content: flex-end;
@@ -754,14 +756,15 @@ body {
 /*-------------------------------------FOOTER--------------------------------------------*/
 
 footer {
-    height: 450px;
+    height: auto;
     width: 100%;
     background-color: rgb(0, 0, 0);
     clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 100%);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .thanksTo {
@@ -769,6 +772,11 @@ footer {
     color: rgb(255, 255, 255);
     text-align: center;
     font-size: 75%;
+    margin: 0;
+}
+
+.thanksTo > div {
+    margin: 0;
 }
 
 .thanksTo a {
@@ -781,6 +789,7 @@ footer {
     width: 60%;
     height: auto;
     align-self: center;
+    margin: 50px 0;
 }
 
 .fab {
@@ -791,6 +800,17 @@ footer {
 
 .fab:hover {
     color: rgb(255, 0, 0);
+}
+
+.email {
+    position: relative;
+    color: white;
+}
+
+.email::before {
+    content: url(../images/icon-email.svg);
+    position: absolute;
+    left: -25px;
 }
 
 
